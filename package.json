@@ -1,47 +1,52 @@
 {
-  "name": "koa2-easy-ts",
-  "version": "1.0.0",
-  "description": "koa2-easy use typescript",
-  "main": "index.js",
-  "scripts": {
-    "build:watch": "tsc -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lxxyx/koa2-easy.git"
-  },
-  "keywords": [
-    "typescript",
-    "koa2",
-    "koa2-easy"
-  ],
-  "dependencies": {
-    "@koa/cors": "^2.2.1",
-    "@types/koa": "^2.0.45",
-    "@types/koa-bodyparser": "^4.2.0",
-    "@types/koa-compress": "^2.0.8",
-    "@types/koa-logger": "^3.1.0",
-    "@types/koa-router": "^7.0.27",
-    "concurrency-logger": "^2.1.0",
-    "koa": "^2.5.0",
-    "koa-bodyparser": "next",
-    "koa-compress": "next",
-    "koa-cors": "^0.0.16",
-    "koa-router": "7",
-    "pm2": "^2.10.2",
-    "reflect-metadata": "^0.1.12",
-    "routing-controllers": "^0.7.7",
-    "ts-node": "latest",
-    "typedi": "^0.7.2",
-    "typescript": "latest"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.3"
-  },
-  "author": "Lxxyx",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Lxxyx/koa2-easy/issues"
-  },
-  "homepage": "https://github.com/Lxxyx/koa2-easy#readme"
+    "name": "koa2-easy-ts",
+    "version": "1.0.0",
+    "description": "koa2-easy use typescript",
+    "main": "index.js",
+    "scripts": {
+        "build:watch": "tsc -w",
+        "dev": "nodemon src/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Lxxyx/koa2-easy.git"
+    },
+    "keywords": [
+        "typescript",
+        "koa2",
+        "koa2-easy"
+    ],
+    "dependencies": {
+        "@koa/cors": "^2.2.1",
+        "@types/koa": "^2.0.45",
+        "@types/koa-bodyparser": "^4.2.0",
+        "@types/koa-compress": "^2.0.8",
+        "@types/koa-logger": "^3.1.0",
+        "@types/koa-router": "^7.0.27",
+        "concurrency-logger": "^2.1.0",
+        "koa": "^2.5.0",
+        "koa-bodyparser": "next",
+        "koa-compress": "next",
+        "koa-cors": "^0.0.16",
+        "koa-router": "7",
+        "mysql2": "^1.6.5",
+        "pm2": "^2.10.2",
+        "reflect-metadata": "^0.1.12",
+        "routing-controllers": "^0.7.7",
+        "sequelize": "^4.42.0",
+        "sequelize-cli": "^5.4.0",
+        "sequelize-typescript": "^0.6.8-beta.0",
+        "ts-node": "latest",
+        "typedi": "^0.7.2",
+        "typescript": "latest"
+    },
+    "devDependencies": {
+        "nodemon": "^1.17.3"
+    },
+    "author": "Lxxyx",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Lxxyx/koa2-easy/issues"
+    },
+    "homepage": "https://github.com/Lxxyx/koa2-easy#readme"
 }

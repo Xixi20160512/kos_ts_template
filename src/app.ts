@@ -7,40 +7,48 @@ import 'reflect-metadata'
 import { useContainer, useKoaServer } from 'routing-controllers'
 import { Container } from 'typedi'
 import * as middlewares from './middwares'
+// load db config
+import sequelize from './db'
 
-const app = new Koa()
+(async () => {
+    //@see: https://github.com/RobinBuschmann/sequelize-typescript-example/blob/5d9ca3e3487cd772581e29b1f1becf4116b96f51/lib/server.ts#L8
+    await sequelize.sync()
 
-app.use(async (ctx, next) => {
-  try {
-    await next()
-    ctx.set('PoweredBy', 'Koa2-Easy')
-  } catch (e) {
-    ctx.status = e.status || e.httpCode || 403
-    ctx.body = {
-      code: ctx.status || 403,
-      message: e.message,
-      data: e.errors ? e.errors : {}
-    }
-  }
-})
+    const app = new Koa()
 
-app.use(compress({ threshold: 2048 }))
-app.use(cors())
-app.use(bodyparser())
-app.use(createLogger({
-  timestamp: true
-}))
+    app.use(async (ctx, next) => {
+        try {
+            await next()
+            ctx.set('PoweredBy', 'Koa2-Easy')
+        } catch (e) {
+            ctx.status = e.status || e.httpCode || 403
+            ctx.body = {
+                code: ctx.status || 403,
+                message: e.message,
+                data: e.errors ? e.errors : {}
+            }
+        }
+    })
 
-useContainer(Container)
-useKoaServer(app, {
-  controllers: [__dirname + "/controllers/*.{ts,js}"],
-  defaults: { paramOptions: { required: true } },
-  defaultErrorHandler: false,
-  middlewares: Object.values(middlewares)
-})
+    app.use(compress({ threshold: 2048 }))
+    app.use(cors())
+    app.use(bodyparser())
+    app.use(createLogger({
+        timestamp: true
+    }))
 
-const port = process.env.PORT ? Number(process.env.PORT) : 3000
+    useContainer(Container)
+    useKoaServer(app, {
+        controllers: [__dirname + "/controllers/*.{ts,js}"],
+        defaults: { paramOptions: { required: true } },
+        defaultErrorHandler: false,
+        middlewares: Object.values(middlewares)
+    })
 
-app.listen(port)
+    const port = process.env.PORT ? Number(process.env.PORT) : 3000
 
-console.log(`Now server is listen http://localhost:${port}`)
+    app.listen(port)
+
+    console.log(`Now server is listen http://localhost:${port}`)
+
+})()

@@ -1,0 +1,1 @@
+使用 sequelize 和 sequelize-cli 实现的数据库版本控制，不推荐在这个项目中使用。
