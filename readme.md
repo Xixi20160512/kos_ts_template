@@ -14,7 +14,7 @@ yarn build:watch
 
 > 注：已经将 .vscode 配置文件夹加入 git ，所以无需再次配置
 
-直接在 debug 界面开启名为 **start debug** 的调试配置
+直接在 debug 界面开启名为 **nodemon** 的调试配置
 
 ## 数据库使用
 

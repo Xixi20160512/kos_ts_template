@@ -147,9 +147,9 @@
   version "5.5.0"
   resolved "http://registry.npm.taobao.org/@types/semver/download/@types/semver-5.5.0.tgz#146c2a29ee7d3bae4bf2fcb274636e264c813c45"
 
-"@types/sequelize@4.27.34":
-  version "4.27.34"
-  resolved "http://registry.npm.taobao.org/@types/sequelize/download/@types/sequelize-4.27.34.tgz#8ac436f23015d8a8ef3163db4400908b17ce3f91"
+"@types/sequelize@4.27.24":
+  version "4.27.24"
+  resolved "http://r.cnpmjs.org/@types/sequelize/download/@types/sequelize-4.27.24.tgz#7d593c062c368f570c68b0217f5c1d4c892ead48"
   dependencies:
     "@types/bluebird" "*"
     "@types/continuation-local-storage" "*"
@@ -818,6 +818,10 @@ es6-iterator@^2.0.1, es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
 
+es6-promise@~4.2.4:
+  version "4.2.6"
+  resolved "http://r.cnpmjs.org/es6-promise/download/es6-promise-4.2.6.tgz#b685edd8258886365ea62b57d30de28fadcd974f"
+
 es6-shim@0.35.3:
   version "0.35.3"
   resolved "http://registry.npm.taobao.org/es6-shim/download/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
@@ -1008,9 +1012,9 @@ generate-function@^2.3.1:
   dependencies:
     is-property "^1.0.2"
 
-generic-pool@^3.4.0:
-  version "3.6.1"
-  resolved "http://registry.npm.taobao.org/generic-pool/download/generic-pool-3.6.1.tgz#a51a8439ee86f0bbcf100fc1db3f45c86289deb4"
+generic-pool@3.5.0:
+  version "3.5.0"
+  resolved "http://r.cnpmjs.org/generic-pool/download/generic-pool-3.5.0.tgz#acac4fd743a175ff20574f380910036464cb61f7"
 
 get-caller-file@^1.0.1:
   version "1.0.3"
@@ -1800,9 +1804,9 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@^1.17.3:
+nodemon@^1.18.10:
   version "1.18.10"
-  resolved "http://registry.npm.taobao.org/nodemon/download/nodemon-1.18.10.tgz#3ba63f64eb4c283cf3e4f75f30817e9d4f393afe"
+  resolved "http://r.cnpmjs.org/nodemon/download/nodemon-1.18.10.tgz#3ba63f64eb4c283cf3e4f75f30817e9d4f393afe"
   dependencies:
     chokidar "^2.1.0"
     debug "^3.1.0"
@@ -2012,6 +2016,12 @@ path-to-regexp@^1.1.1:
   resolved "http://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
   dependencies:
     isarray "0.0.1"
+
+pdf-image@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.cnpmjs.org/pdf-image/download/pdf-image-2.0.0.tgz#f134296876c3d5aacb6bb5805ad15d0a46775fd5"
+  dependencies:
+    es6-promise "~4.2.4"
 
 pidusage@^1.2.0:
   version "1.2.0"
@@ -2315,26 +2325,26 @@ sequelize-cli@^5.4.0:
     umzug "^2.1.0"
     yargs "^12.0.5"
 
-sequelize-typescript@^0.6.8-beta.0:
-  version "0.6.8-beta.0"
-  resolved "http://registry.npm.taobao.org/sequelize-typescript/download/sequelize-typescript-0.6.8-beta.0.tgz#e400e5b468e0f42ad8c82ba2ef124c7603384294"
+sequelize-typescript@^0.6.7:
+  version "0.6.7"
+  resolved "http://r.cnpmjs.org/sequelize-typescript/download/sequelize-typescript-0.6.7.tgz#372be979cbae060c554fdbaf2c2d8c93a0283303"
   dependencies:
     "@types/bluebird" "3.5.18"
     "@types/node" "6.0.41"
-    "@types/sequelize" "4.27.34"
+    "@types/sequelize" "4.27.24"
     es6-shim "0.35.3"
     glob "7.1.2"
 
-sequelize@^4.42.0:
-  version "4.42.0"
-  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.42.0.tgz#439467ba7bfe7d5afcc56d62b3e091860fbf18f3"
+sequelize@^4.43.0:
+  version "4.43.0"
+  resolved "http://r.cnpmjs.org/sequelize/download/sequelize-4.43.0.tgz#41c36c7684b0ea23ca7be1c3af3d65f2309a4ca6"
   dependencies:
     bluebird "^3.5.0"
     cls-bluebird "^2.1.0"
     debug "^3.1.0"
     depd "^1.1.0"
     dottie "^2.0.0"
-    generic-pool "^3.4.0"
+    generic-pool "3.5.0"
     inflection "1.12.0"
     lodash "^4.17.1"
     moment "^2.20.0"

@@ -12,7 +12,8 @@ import sequelize from './db'
 
 (async () => {
     //@see: https://github.com/RobinBuschmann/sequelize-typescript-example/blob/5d9ca3e3487cd772581e29b1f1becf4116b96f51/lib/server.ts#L8
-    await sequelize.sync()
+    //@see: https://github.com/sequelize/sequelize/issues/537#issuecomment-289677652
+    await sequelize.sync({ alter: true })
 
     const app = new Koa()
 
